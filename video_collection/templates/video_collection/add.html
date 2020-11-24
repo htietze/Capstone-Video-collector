@@ -1,0 +1,28 @@
+{% extends 'video_collection/base.html' %}
+
+{% block content %}
+
+<h2>Add new video</h2>
+
+{% for message in messages %}
+    <li>{{ message }}</li>
+{% endfor %}
+
+<!-- 
+    The way Django does things is still really weird to me.
+    One html has a link that directs to the urls.py, where 
+    it picks up what html it's supposed to direct to, but 
+    also the view function it's supposed to run to fill out
+    that html. So it runs that to get the new_video_form 
+    for it to be displayed here and like. runs. add_video again?
+    when the submit button is clicked, to confirm it being a POST
+    and to bring the data needed to complete the view function?
+ -->
+
+<form class="form" method="POST" action="{% url 'add_video' %}">
+    {% csrf_token %}
+    {{ new_video_form }}
+    <button type="submit">Add video</button>
+</form>
+
+{% endblock %}

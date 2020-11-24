@@ -1,0 +1,29 @@
+body {
+    background-color: lightgreen;
+    font-size: large;
+}
+
+h2,h3 {
+    color: darkgreen;
+}
+
+.form {
+    color: darkgreen
+}
+
+li {
+    color: darkgreen;
+}
+
+#video_list, #search {
+    color: darkgreen;
+}
+
+.navigation {
+    margin: 10px;
+}
+
+.navigation > a {
+    color: darkgreen;
+    padding-right: 30px;
+}
